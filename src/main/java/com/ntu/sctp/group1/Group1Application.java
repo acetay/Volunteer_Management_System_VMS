@@ -182,56 +182,56 @@ public class Group1Application {
 		person8 = volunteerRepo.save(person8);
 
 		user.setUsername(person.getEmail());
-		user.setUid("aId0fTgOlKdrNpCd6IapWFnBC2D3");
+		user.setUid("aW5GG22r3BWe2FLQeAzBklcBVay1");
 		user.setTokenIsActive(false);
 		user.setVolunteerId(person.getId());
 		user.setRole(Role.USER);
 		userRepo.save(user);
 
 		user2.setUsername(person2.getEmail());
-		user2.setUid("Bq1SrD7WrHY4TNoBIY2Nw4v7K6x1");
+		user2.setUid("LmZrhY7arORfZIGejUDoUA1MbP03");
 		user2.setTokenIsActive(false);
 		user2.setVolunteerId(person2.getId());
 		user2.setRole(Role.USER);
 		userRepo.save(user2);
 
 		user3.setUsername(person4.getEmail());
-		user3.setUid("SehwggBQfPOpHDtUKvv6OtD0IUA3");
+		user3.setUid("NWRFuADqX0WuXAJJvmNSO1wnMEw2");
 		user3.setTokenIsActive(false);
 		user3.setVolunteerId(person4.getId());
 		user3.setRole(Role.USER);
 		userRepo.save(user3);
 
 		admin.setUsername(person3.getEmail());
-		admin.setUid("YH70F63hN4gx3FgKW5yQJYP14az2");
+		admin.setUid("RgLApwCM4TTyyLdSKAPaFPyveSQ2");
 		admin.setTokenIsActive(false);
 		admin.setVolunteerId(person3.getId());
 		admin.setRole(Role.ADMIN);
 		userRepo.save(admin);
 
 		user5.setUsername(person5.getEmail());
-		user5.setUid("QiduurfOymRClhhAv6PZCJtpJ2d2");
+		user5.setUid("xWcZnB2UHyPbI8qwln4ckRDVbAI2");
 		user5.setTokenIsActive(false);
 		user5.setVolunteerId(person5.getId());
 		user5.setRole(Role.USER);
 		userRepo.save(user5);
 
 		user6.setUsername(person6.getEmail());
-		user6.setUid("oOnrhkENLHbRPrs3dt8IN1hX1mM2");
+		user6.setUid("1MIw7kdAUcRhne5Ogl2vmB0mdYH3");
 		user6.setTokenIsActive(false);
 		user6.setVolunteerId(person6.getId());
 		user6.setRole(Role.USER);
 		userRepo.save(user6);
 
 		user7.setUsername(person7.getEmail());
-		user7.setUid("sat4suIMMaapRvPuybHabeGlym52");
+		user7.setUid("Aiu3DWShlsdhbHwEtFzfDVn10u13");
 		user7.setTokenIsActive(false);
 		user7.setVolunteerId(person7.getId());
 		user7.setRole(Role.USER);
 		userRepo.save(user7);
 
 		user8.setUsername(person8.getEmail());
-		user8.setUid("r07EMIjXmKX0Io7eXHyPNKr4Hyq2");
+		user8.setUid("XXAY3ERC8xTLeIhBVXKsGVkbPpB2");
 		user8.setTokenIsActive(false);
 		user8.setVolunteerId(person8.getId());
 		user8.setRole(Role.USER);

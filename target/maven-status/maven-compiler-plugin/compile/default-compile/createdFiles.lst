@@ -20,7 +20,6 @@ com/ntu/sctp/group1/entity/Availability.class
 com/ntu/sctp/group1/Service/UserService.class
 com/ntu/sctp/group1/repository/UserRepository.class
 com/ntu/sctp/group1/FirebaseConfiguration.class
-com/ntu/sctp/group1/Controller/AvailabilityController$Status.class
 com/ntu/sctp/group1/Service/ProfileService.class
 com/ntu/sctp/group1/Controller/VolunteerController.class
 com/ntu/sctp/group1/Controller/EnrolmentController.class
@@ -28,12 +27,10 @@ com/ntu/sctp/group1/DataTransferObject/ProfileEditDto.class
 com/ntu/sctp/group1/repository/AvailabilityRepository.class
 com/ntu/sctp/group1/Controller/UserController$Status.class
 com/ntu/sctp/group1/Exceptions/NoProgramFoundExceptions.class
-com/ntu/sctp/group1/Service/AvailabilityService.class
 com/ntu/sctp/group1/Exceptions/AvailDateFoundException.class
 com/ntu/sctp/group1/Controller/ProgramController$Message.class
 com/ntu/sctp/group1/Exceptions/InvalidUidException.class
 com/ntu/sctp/group1/Controller/ProfileController$Message.class
-com/ntu/sctp/group1/Controller/AvailabilityController.class
 com/ntu/sctp/group1/Service/VolunteerService.class
 com/ntu/sctp/group1/Service/ProgramService.class
 com/ntu/sctp/group1/DataTransferObject/UidDto.class

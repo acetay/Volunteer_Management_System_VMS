@@ -2,7 +2,7 @@ package com.ntu.sctp.group1.Controller
 
 import com.ntu.sctp.group1.Exceptions.NoAvailabilityFoundExceptions
 import com.ntu.sctp.group1.Exceptions.NoVolunteerFoundExceptions
-import com.ntu.sctp.group1.Service.TestService
+import com.ntu.sctp.group1.Service.AvailabilityService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.*
@@ -10,21 +10,21 @@ import java.time.LocalDate
 
 @CrossOrigin(origins = ["*"], maxAge = 86400, allowCredentials = "false")
 @RestController
-class TestController {
+class AvailabilityController {
 
     @Autowired
-    lateinit var TestService: TestService
+    lateinit var AvailabilityService: AvailabilityService
 
     data class Status(val msg: String, val success: Boolean)
 
-    @PostMapping("/test/volunteers/availability/{volunteerId}")
+    @PostMapping("/volunteers/availability/{volunteerId}")
     fun setAvailability(
         @PathVariable volunteerId: Int,
         @RequestParam date: String,
         @RequestParam timeslot: String
     ): ResponseEntity<*> {
         return try {
-            ResponseEntity.ok().body(TestService.setAvailability(volunteerId, date, timeslot))
+            ResponseEntity.ok().body(AvailabilityService.setAvailability(volunteerId, date, timeslot))
         } catch (ex: NoVolunteerFoundExceptions) {
             ex.printStackTrace()
             ResponseEntity.notFound().build<Any>()
@@ -34,11 +34,11 @@ class TestController {
         }
     }
 
-    @GetMapping("/test/volunteers/availability/date/{date}")
+    @GetMapping("/volunteers/availability/date/{date}")
     fun searchByDate(@PathVariable date: String): ResponseEntity<*> {
         return try {
             val parsedDate = LocalDate.parse(date)
-            val volunteers = TestService.searchByDate(parsedDate)
+            val volunteers = AvailabilityService.searchByDate(parsedDate)
             ResponseEntity.ok().body(volunteers)
         } catch (ex: NoAvailabilityFoundExceptions) {
             ex.printStackTrace()
@@ -49,10 +49,10 @@ class TestController {
         }
     }
 
-    @GetMapping("/test/volunteers/availabilities/{volunteerId}")
+    @GetMapping("/volunteers/availabilities/{volunteerId}")
     fun getAvailabilitiesOfAVolunteer(@PathVariable volunteerId: Int): ResponseEntity<*> {
         return try {
-            ResponseEntity.ok().body(TestService.getAvailabilitiesOfAVolunteer(volunteerId))
+            ResponseEntity.ok().body(AvailabilityService.getAvailabilitiesOfAVolunteer(volunteerId))
         } catch (ex: NoVolunteerFoundExceptions) {
             ex.printStackTrace()
             ResponseEntity.notFound().build<Any>()
@@ -65,7 +65,7 @@ class TestController {
         }
     }
 
-    @PutMapping("/test/volunteers/availability/{volunteerId}")
+    @PutMapping("/volunteers/availability/{volunteerId}")
     fun updateAvailability(
         @PathVariable volunteerId: Int,
         @RequestParam date: String,
@@ -73,7 +73,7 @@ class TestController {
     ): ResponseEntity<*> {
         return try {
             val parsedDate = LocalDate.parse(date)
-            ResponseEntity.ok().body(TestService.updateAvailability(volunteerId, parsedDate, isAvail))
+            ResponseEntity.ok().body(AvailabilityService.updateAvailability(volunteerId, parsedDate, isAvail))
         } catch (ex: NoVolunteerFoundExceptions) {
             ex.printStackTrace()
             ResponseEntity.notFound().build<Any>()
@@ -83,14 +83,14 @@ class TestController {
         }
     }
 
-    @DeleteMapping("/test/volunteers/availability/{volunteerId}")
+    @DeleteMapping("/volunteers/availability/{volunteerId}")
     fun deleteAvailability(
         @PathVariable volunteerId: Int,
         @RequestParam date: String
     ): ResponseEntity<*> {
         return try {
             val parsedDate = LocalDate.parse(date)
-            TestService.deleteAvail(volunteerId, parsedDate)
+            AvailabilityService.deleteAvail(volunteerId, parsedDate)
             ResponseEntity.ok().body(Status("Availability deleted successfully", true))
         } catch (ex: NoVolunteerFoundExceptions) {
             ex.printStackTrace()
@@ -101,10 +101,10 @@ class TestController {
         }
     }
 
-    @GetMapping("/test/volunteers/availability/all")
+    @GetMapping("/volunteers/availability/all")
     fun getAllAvailabilities(): ResponseEntity<*> {
         return try {
-            ResponseEntity.ok().body(TestService.getAllAvailabilities())
+            ResponseEntity.ok().body(AvailabilityService.getAllAvailabilities())
         } catch (ex: NoAvailabilityFoundExceptions) {
             ResponseEntity.notFound().build<Any>()
         } catch (ex: Exception) {

@@ -3,9 +3,12 @@ package com.ntu.sctp.group1.Security;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 @Configuration
 public class SecurityConfigurationFilterChain {
@@ -19,15 +22,15 @@ public class SecurityConfigurationFilterChain {
                 .headers().frameOptions().disable() // New Line: the h2 console runs on a "frame". By default, Spring Security prevents rendering within an iframe. This line disables its prevention.
                 .and()
                 .csrf().disable()
-                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-//                .and()
-//                .authorizeHttpRequests()
-//                .requestMatchers(new AntPathRequestMatcher("/h2/**"))
-//                .permitAll()
-//                .requestMatchers(HttpMethod.POST, "/api/**").permitAll()
-//                .anyRequest().authenticated()
-//                .and()
-//                .addFilterAfter(firebaseFilter, UsernamePasswordAuthenticationFilter.class);
+                .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .and()
+                .authorizeHttpRequests()
+                .requestMatchers(new AntPathRequestMatcher("/h2/**"))
+                .permitAll()
+                .requestMatchers(HttpMethod.POST, "/api/**").permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .addFilterAfter(firebaseFilter, UsernamePasswordAuthenticationFilter.class);
 
         http.cors();
 

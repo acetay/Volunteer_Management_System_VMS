@@ -5,14 +5,12 @@
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/Controller/EnrolmentController.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/entity/Volunteer.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/Security/FirebaseFilter.java
-/Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/Service/AvailabilityService.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/Exceptions/AvailDateFoundException.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/Service/EnrolmentService.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/entity/Program.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/DataTransferObject/EnrolEditDto.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/entity/Role.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/Exceptions/NoEnrolmentFoundExceptions.java
-/Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/Controller/AvailabilityController.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/Service/ProgramService.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/entity/Enrolment.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/Exceptions/NoProfileFoundExceptions.java

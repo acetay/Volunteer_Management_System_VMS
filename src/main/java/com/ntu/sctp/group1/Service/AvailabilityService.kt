@@ -13,7 +13,7 @@ import java.time.LocalDate
 import java.util.stream.Collectors
 
 @Service
-class TestService @Autowired constructor(
+class AvailabilityService @Autowired constructor(
     private val availabilityRepo: AvailabilityRepository,
     private val volunteerRepository: VolunteerRepository
 ) {
