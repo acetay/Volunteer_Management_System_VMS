@@ -14,7 +14,7 @@ import java.util.Set;
 
 
 @AllArgsConstructor
-@NoArgsConstructor
+@NoArgsConstructor(force = true)
 @RequiredArgsConstructor
 @Getter
 @Setter
@@ -50,7 +50,7 @@ public class Volunteer {
     private String occupation;
 
     @Column(name = "education")
-    private String education = "";
+    public String education = "";
 
     @Column(name = "language")
     private String language = "";
@@ -80,11 +80,11 @@ public class Volunteer {
     @Column(name = "created_at", updatable = false)
     Timestamp createdAt = new Timestamp(new Date().getTime());
 
-    public Timestamp getCreatedAt() {
+    private Timestamp getCreatedAt() {
         return createdAt;
     }
 
-    public void setCreatedAt(Timestamp createdAt) {
+    private void setCreatedAt(Timestamp createdAt) {
         this.createdAt = createdAt;
     }
 
@@ -94,7 +94,7 @@ public class Volunteer {
 
     @JsonIgnore
     @OneToMany(mappedBy = "volunteer", cascade = CascadeType.ALL)
-    List<Availability> availabilities;
+    public List<Availability> availabilities;
 
     @JsonIgnore
     @ManyToMany

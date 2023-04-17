@@ -20,17 +20,17 @@ public class Availability {
 
     @GeneratedValue (strategy = GenerationType.IDENTITY)
     @Id
-    private Integer id;
+    public Integer id;
 
     @JsonFormat(pattern = "dd-MM-yyyy")
     @Column(name = "date")
-    private LocalDate date;
+    public LocalDate date;
 
     @Column(name = "avail")
-    private boolean avail;
+    public boolean avail;
 
     @Column(name = "timeslot")
-    private String timeslot;
+    public String timeslot;
 
     @Column(name="created_at", updatable= false)
     Timestamp createdAt = new Timestamp(new Date().getTime());
@@ -45,6 +45,6 @@ public class Availability {
 
     @ManyToOne
     @JoinColumn(name = "volunteer_id", referencedColumnName = "id")
-    private Volunteer volunteer;
+    public Volunteer volunteer;
 
 }
