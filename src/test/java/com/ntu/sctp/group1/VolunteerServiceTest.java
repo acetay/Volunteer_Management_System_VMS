@@ -33,7 +33,7 @@ public class VolunteerServiceTest {
         volunteer.setEmail("johndoe@example.com");
         volunteer.setContact("12345678");
 
-        when(volunteerRepository.findById(2)).thenReturn(Optional.of(volunteer)); //change to 2 to fail the test
+        when(volunteerRepository.findById(1)).thenReturn(Optional.of(volunteer)); //change to 2 to fail the test
 
         // getVolunteerById
         Volunteer result = volunteerService.getVolunteerById(1);
