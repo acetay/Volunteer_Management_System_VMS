@@ -71,6 +71,21 @@ public class EnrolmentController {
         }
     }
 
+    // Added on 6 May
+    @PutMapping("/admin/enrolments/unenrol")
+    public ResponseEntity<?> removeVolunteer(@RequestParam Integer volunteerId, @RequestParam Integer programId ) {
+        try {
+            enrolmentService.removeVolunteerFromEnrolment(volunteerId, programId);
+            return ResponseEntity.ok().body("volunteer removed successfully");
+        } catch (NoEnrolmentFoundExceptions | NoVolunteerFoundExceptions ex) {
+            ex.printStackTrace();
+            return ResponseEntity.notFound().build();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return ResponseEntity.badRequest().body(new Status(ex.getMessage(),false));
+        }
+    }
+
     @GetMapping ("/admin/enrolments/volunteers")
     public ResponseEntity<?> getAllVolunteer(@RequestParam int program_id){
         try{
