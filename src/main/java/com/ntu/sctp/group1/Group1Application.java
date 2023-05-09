@@ -31,16 +31,12 @@ public class Group1Application {
 	@Autowired
 	EnrolmentRepository enrolmentRepository;
 
-//	@Autowired
-//	AvailabilityRepository availRepo;
+
 
 	@Autowired
 	UserRepository userRepo;
 
-//	BasicSessionCredentials awsCreds = new BasicSessionCredentials("access_key_id", "secret_key_id", "session_token");
-//	AmazonS3 s3Client = AmazonS3ClientBuilder.standard()
-//			.withCredentials(new AWSStaticCredentialsProvider(awsCreds))
-//			.build();
+
 
 	public static void main(String[] args) {
 		SpringApplication.run(Group1Application.class, args);
@@ -79,7 +75,7 @@ public class Group1Application {
 		Profile profile7 = new Profile();
 		Profile profile8 = new Profile();
 
-		Volunteer person = new Volunteer("Coco Tan", "coco@mail.com");
+		Volunteer person = new Volunteer("Coco Tan", "ace@mail.com");
 		person.setAddress("Blk 233, Bishan street 12");
 		person.setProfilePicture("https://mountstudio.com.sg/wp-content/uploads/corporate-headshot-studio-singapore.jpg");
 		person.setDateOfBirth(LocalDate.parse(("1980-07-01")));
@@ -91,7 +87,7 @@ public class Group1Application {
 		person.setReferrerName("Oliver");
 		person.setReferrerContact(Long.parseLong("92378229"));
 
-		Volunteer person2 = new Volunteer("Enzo Lorenzo", "may@mail.com");
+		Volunteer person2 = new Volunteer("Enzo Lorenzo", "user@mail.com");
 		person2.setAddress("Blk 233, Ang mo kio street 12");
 		person2.setProfilePicture("https://pbs.twimg.com/media/DwoqWMYWwAAow84.jpg");
 		person2.setDateOfBirth(LocalDate.parse(("1990-07-01")));
@@ -103,7 +99,7 @@ public class Group1Application {
 		person2.setReferrerName("Oliver");
 		person2.setReferrerContact(Long.parseLong("92378229"));
 
-		Volunteer person3 = new Volunteer("Ace Tay", "ace@mail.com");
+		Volunteer person3 = new Volunteer("Ace Tay", "admin2@mail.com");
 		person3.setProfilePicture("https://www.whiteroomstudio.com.sg/wordpress/wp-content/uploads/2021/09/headshots-3.jpg");
 		person3.setAddress("Blk 233, yishun street 12");
 		person3.setDateOfBirth(LocalDate.parse(("1997-07-01")));
@@ -187,28 +183,28 @@ public class Group1Application {
 		person8 = volunteerRepo.save(person8);
 
 		user.setUsername(person.getEmail());
-		user.setUid("aId0fTgOlKdrNpCd6IapWFnBC2D3");
+		user.setUid("Z0j9F3WfpVdR1dvoQEf3TyoMlzF3");
 		user.setTokenIsActive(false);
 		user.setVolunteerId(person.getId());
 		user.setRole(Role.USER);
 		userRepo.save(user);
 
 		user2.setUsername(person2.getEmail());
-		user2.setUid("Bq1SrD7WrHY4TNoBIY2Nw4v7K6x1");
+		user2.setUid("TTGjjzVsDsQ5zaFJwRqVR8BZLQf2");
 		user2.setTokenIsActive(false);
 		user2.setVolunteerId(person2.getId());
 		user2.setRole(Role.USER);
 		userRepo.save(user2);
 
 		user3.setUsername(person4.getEmail());
-		user3.setUid("SehwggBQfPOpHDtUKvv6OtD0IUA3");
+		user3.setUid("H2zvPIIHaDTmoWOtEcpGnzwmP3w2");
 		user3.setTokenIsActive(false);
 		user3.setVolunteerId(person4.getId());
 		user3.setRole(Role.USER);
 		userRepo.save(user3);
 
 		admin.setUsername(person3.getEmail());
-		admin.setUid("YH70F63hN4gx3FgKW5yQJYP14az2");
+		admin.setUid("FSOFbSsrVuWdEXnidyf9r10ZzRf1");
 		admin.setTokenIsActive(false);
 		admin.setVolunteerId(person3.getId());
 		admin.setRole(Role.ADMIN);
@@ -354,12 +350,6 @@ public class Group1Application {
 
 		programRepo.saveAll(List.of(program1, program2, program3, program4, program5, program6));
 		enrolmentRepository.saveAll(List.of(enrolment1, enrolment2, enrolment3, enrolment4, enrolment5, enrolment6));
-
-//		Availability avail = new Availability();
-//		avail.setDate(LocalDate.parse(("2025-07-01")));
-//		avail.setAvail(true);
-//		availRepo.save(avail);
-		//yyy
 
 
 	}
