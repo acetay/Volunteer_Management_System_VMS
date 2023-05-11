@@ -35,6 +35,7 @@
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/repository/ProfileRepository.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/FirebaseConfiguration.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/DataTransferObject/ProgramDto.java
+/Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/SpringdocConfig.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/repository/EnrolmentRepository.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/Exceptions/NoAvailabilityFoundExceptions.java
 /Users/aceveron/CodingStuff/Volunteer_Management_System_VMS/src/main/java/com/ntu/sctp/group1/Group1Application.java

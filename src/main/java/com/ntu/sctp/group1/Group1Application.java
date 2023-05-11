@@ -204,7 +204,7 @@ public class Group1Application {
 		userRepo.save(user3);
 
 		admin.setUsername(person3.getEmail());
-		admin.setUid("FSOFbSsrVuWdEXnidyf9r10ZzRf1");
+		admin.setUid("lA3O73lBaZcQmm9qCGHfFTbu9Vp2");
 		admin.setTokenIsActive(false);
 		admin.setVolunteerId(person3.getId());
 		admin.setRole(Role.ADMIN);
