@@ -4,8 +4,6 @@ import com.ntu.sctp.group1.Exceptions.NoAvailabilityFoundExceptions;
 import com.ntu.sctp.group1.Exceptions.NoVolunteerFoundExceptions;
 import com.ntu.sctp.group1.Service.AvailabilityService;
 import com.ntu.sctp.group1.entity.Volunteer;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -22,8 +20,6 @@ public class AvailabilityController {
 
     record Status(String msg, boolean success){};
 
-    @Operation(summary = "Set new availability of a volunteer", description = "Set a new date and timeslot that a volunteer is available")
-    @SecurityRequirement(name = "Bearer Authentication")
     @PostMapping("/volunteers/availability/{volunteerId}")
     public ResponseEntity<?> setAvailability(@PathVariable Integer volunteerId, @RequestParam String date, @RequestParam String timeslot) {
         try {
@@ -37,8 +33,6 @@ public class AvailabilityController {
         }
     }
 
-    @Operation(summary = "Search volunteers by availability", description = "Search volunteers according to avail dates and timeslots")
-    @SecurityRequirement(name = "Bearer Authentication")
     @GetMapping("/volunteers/availability/date/{date}")
     public ResponseEntity<?> searchByDate(@PathVariable String date) {
         try {
@@ -55,8 +49,6 @@ public class AvailabilityController {
     }
 
     // Removed availabilityException - 25 Apr
-    @Operation(summary = "Get availabilities of a volunteer", description = "Get all availabilities of a volunteer")
-    @SecurityRequirement(name = "Bearer Authentication")
     @GetMapping("/volunteers/availabilities/{volunteerId}")
     public ResponseEntity<?> getAvailabilitiesOfAVolunteer(@PathVariable Integer volunteerId) {
         try {
@@ -71,8 +63,6 @@ public class AvailabilityController {
     }
 
     // Change to Date String - 29 Mar
-    @Operation(summary = "Update availability of volunteer by ID", description = "Update the available date and timeslot of a volunteer")
-    @SecurityRequirement(name = "Bearer Authentication")
     @PutMapping("/volunteers/availability/{volunteerId}")
     public ResponseEntity<?> updateAvailability(@PathVariable Integer volunteerId,
                                                 @RequestParam String date,
@@ -90,12 +80,10 @@ public class AvailabilityController {
     }
 
     // Added on 29 Mar
-    @Operation(summary = "Delete availability of a volunteer", description = "Delete an availability of a volunteer based on date")
-    @SecurityRequirement(name = "Bearer Authentication")
     @DeleteMapping("/volunteers/availability/{volunteerId}")
     public ResponseEntity<?> deleteAvailability(@PathVariable Integer volunteerId,
                                                 @RequestParam String date
-    ) {
+                                                ) {
         try {
             LocalDate parsedDate = LocalDate.parse((date));
             availabilityService.deleteAvail(volunteerId, parsedDate);
@@ -110,14 +98,13 @@ public class AvailabilityController {
     }
 
     // Added on 31 Mar
-    @Operation(summary = "Get all availabilities of volunteers", description = "Get all availabilities of volunteers for analysis")
-    @SecurityRequirement(name = "Bearer Authentication")
     @GetMapping("/volunteers/availability/all")
     public ResponseEntity<?> getAllAvailabilities () {
         try {
             return ResponseEntity.ok().body(availabilityService.getAllAvailabilities());
-        }
-        catch(Exception ex) {
+        } catch(NoAvailabilityFoundExceptions ex) {
+            return ResponseEntity.notFound().build();
+        } catch(Exception ex) {
             return ResponseEntity.internalServerError().body(new Status(ex.getMessage(), false));
         }
     }

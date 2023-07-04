@@ -21,7 +21,4 @@ public class EnrolEditDto {
 
     private String timeOfProgram;
 
-    public static class FirebaseCredentials {
-
-    }
 }
