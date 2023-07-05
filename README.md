@@ -6,7 +6,7 @@
 2. RUN < [docker run -p 3001:3001 acetay/vmsfrontend:v1](#) > in command line to start backend server on port 3001. 
 3. Mock credentials for testing:
 - Admin - (username - "ace@mail.com", password - "password")
-- Volunteer - (username - "may@mail.com", password - "password")
+- Volunteer - (username - "coco@mail.com", password - "password")
 
 ## Description
 ### App Summary
