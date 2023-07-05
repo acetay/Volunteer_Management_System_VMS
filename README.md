@@ -17,6 +17,9 @@
 5. App in test environment (on port 8080) is using H2 in-memory database.
 6. For frontend repository, please refer to https://github.com/acetay/vms_frontend_typescript
 
+### Relational Diagrams
+![My Image](RelationalDiagrams.png)
+
 ## Team Members
 
 - [Jonathan](https://github.com/goodwill80 "jonathan's github")
