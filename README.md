@@ -3,7 +3,7 @@
 ## Steps to start app in test environment
 
 1. RUN < [docker run -p 8080:8080 acetay/vms-springboot:v1.0.0](#) > in command line to start backend server on port 8080. (PLEASE DO THIS FIRST!)
-2. RUN < [docker run -p 3001:3001 acetay/vmsfrontend:v1](#) > in command line to start backend server on port 3001. 
+2. RUN < [docker run -p 3001:3001 acetay/vmsfrontend:v2](#) > in command line to start backend server on port 3001. 
 3. Mock credentials for testing:
 - Admin - (username - "ace@mail.com", password - "password")
 - Volunteer - (username - "coco@mail.com", password - "password")
