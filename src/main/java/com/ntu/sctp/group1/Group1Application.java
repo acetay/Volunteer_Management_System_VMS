@@ -296,7 +296,7 @@ public class Group1Application {
 		program3.setTimeOfProgram("Full day");
 		program3.setPhoto("https://wayd-sg.s3.ap-southeast-1.amazonaws.com/img/2020/08/20002802/20200817_Willing-Hearts_CCH9667-scaled.jpg");
 		program3.setName("Soup Kitchen");
-		program3.setDate(LocalDate.parse(("2023-04-03")));
+		program3.setDate(LocalDate.parse(("2023-90-20")));
 		program3.setDescription("Hone your cooking skills and spread the joy to others!");
 		program3.setVolunteersRequired(15);
 		program3.setNoOfVolunteers(0);
@@ -310,7 +310,7 @@ public class Group1Application {
 		program4.setTimeOfProgram("Full day");
 		program4.setPhoto("https://www.sassymamasg.com/wp-content/uploads/2018/07/Singapore-Childrens-association-kids-charity-walk.jpg");
 		program4.setName("Exploration");
-		program4.setDate(LocalDate.parse(("2023-04-04")));
+		program4.setDate(LocalDate.parse(("2023-09-21")));
 		program4.setDescription("Bring the children to various places of interests");
 		program4.setVolunteersRequired(15);
 		program4.setNoOfVolunteers(0);
@@ -324,7 +324,7 @@ public class Group1Application {
 		program5.setTimeOfProgram("Full day");
 		program5.setPhoto("https://media.timeout.com/images/105905438/750/562/image.jpg");
 		program5.setName("Donation events");
-		program5.setDate(LocalDate.parse(("2023-04-05")));
+		program5.setDate(LocalDate.parse(("2023-09-22")));
 		program5.setDescription("To source for donations at various locations");
 		program5.setVolunteersRequired(15);
 		program5.setNoOfVolunteers(0);
@@ -338,7 +338,7 @@ public class Group1Application {
 		program6.setTimeOfProgram("Full day");
 		program6.setPhoto("https://thesmartlocal.com/wp-content/uploads/2018/11/images_easyblog_articles_7240_b2ap3_large_charity-subscriptions-4.png");
 		program6.setName("Donation events");
-		program6.setDate(LocalDate.parse(("2023-04-02")));
+		program6.setDate(LocalDate.parse(("2023-09-23")));
 		program6.setDescription("To source for donations at various locations");
 		program6.setVolunteersRequired(15);
 		program6.setNoOfVolunteers(0);
