@@ -189,49 +189,49 @@ public class Group1Application {
 		userRepo.save(user);
 
 		user2.setUsername(person2.getEmail());
-		user2.setUid("LmZrhY7arORfZIGejUDoUA1MbP03");
+		user2.setUid("k4pikjYOBSYxsIW22fLAZ8WsgzC2");
 		user2.setTokenIsActive(false);
 		user2.setVolunteerId(person2.getId());
 		user2.setRole(Role.USER);
 		userRepo.save(user2);
 
 		user3.setUsername(person4.getEmail());
-		user3.setUid("SehwggBQfPOpHDtUKvv6OtD0IUA3");
+		user3.setUid("LmZrhY7arORfZIGejUDoUA1MbP03");
 		user3.setTokenIsActive(false);
 		user3.setVolunteerId(person4.getId());
 		user3.setRole(Role.USER);
 		userRepo.save(user3);
 
 		admin.setUsername(person3.getEmail());
-		admin.setUid("RgLApwCM4TTyyLdSKAPaFPyveSQ2");
+		admin.setUid("lA3O73lBaZcQmm9qCGHfFTbu9Vp2");
 		admin.setTokenIsActive(false);
 		admin.setVolunteerId(person3.getId());
 		admin.setRole(Role.ADMIN);
 		userRepo.save(admin);
 
 		user5.setUsername(person5.getEmail());
-		user5.setUid("QiduurfOymRClhhAv6PZCJtpJ2d2");
+		user5.setUid("RgLApwCM4TTyyLdSKAPaFPyveSQ2");
 		user5.setTokenIsActive(false);
 		user5.setVolunteerId(person5.getId());
 		user5.setRole(Role.USER);
 		userRepo.save(user5);
 
 		user6.setUsername(person6.getEmail());
-		user6.setUid("oOnrhkENLHbRPrs3dt8IN1hX1mM2");
+		user6.setUid("0CaRR3gXiAbSeK7kW4wQFOPQXIp1");
 		user6.setTokenIsActive(false);
 		user6.setVolunteerId(person6.getId());
 		user6.setRole(Role.USER);
 		userRepo.save(user6);
 
 		user7.setUsername(person7.getEmail());
-		user7.setUid("sat4suIMMaapRvPuybHabeGlym52");
+		user7.setUid("5v55FwXlM7OIm9tUTICawmJyj2c2");
 		user7.setTokenIsActive(false);
 		user7.setVolunteerId(person7.getId());
 		user7.setRole(Role.USER);
 		userRepo.save(user7);
 
 		user8.setUsername(person8.getEmail());
-		user8.setUid("r07EMIjXmKX0Io7eXHyPNKr4Hyq2");
+		user8.setUid("K7D79iEIQecacHAOOaQEAvorjKQ2");
 		user8.setTokenIsActive(false);
 		user8.setVolunteerId(person8.getId());
 		user8.setRole(Role.USER);
@@ -268,7 +268,7 @@ public class Group1Application {
 		program1.setTimeOfProgram("Full day");
 		program1.setName("Soup Kitchen");
 		program1.setPhoto("https://assets.avenueone.sg/wp-content/uploads/2019/11/where-to-volunteer-in-Singapore-Willing-Hearts.jpeg");
-		program1.setDate(LocalDate.parse(("2023-04-01")));
+		program1.setDate(LocalDate.parse(("2023-09-20")));
 		program1.setDescription("Hone your cooking skills and bring joy to others!");
 		program1.setVolunteersRequired(20);
 		program1.setNoOfVolunteers(0);
@@ -283,7 +283,7 @@ public class Group1Application {
 		program2.setPhoto("https://www.ahealingheartmedical.com/assets/img/team/A-Healing-Heart-Medical-Team.webp");
 		program2.setName("Elderly care");
 		program2.setDescription("Care for our seniors!");
-		program2.setDate(LocalDate.parse(("2023-04-02")));
+		program2.setDate(LocalDate.parse(("2023-09-21")));
 		program2.setVolunteersRequired(15);
 		program2.setNoOfVolunteers(0);
 		enrolment2.setProgram(program2);
@@ -296,7 +296,7 @@ public class Group1Application {
 		program3.setTimeOfProgram("Full day");
 		program3.setPhoto("https://wayd-sg.s3.ap-southeast-1.amazonaws.com/img/2020/08/20002802/20200817_Willing-Hearts_CCH9667-scaled.jpg");
 		program3.setName("Soup Kitchen");
-		program3.setDate(LocalDate.parse(("2023-90-20")));
+		program3.setDate(LocalDate.parse(("2023-09-22")));
 		program3.setDescription("Hone your cooking skills and spread the joy to others!");
 		program3.setVolunteersRequired(15);
 		program3.setNoOfVolunteers(0);
@@ -310,7 +310,7 @@ public class Group1Application {
 		program4.setTimeOfProgram("Full day");
 		program4.setPhoto("https://www.sassymamasg.com/wp-content/uploads/2018/07/Singapore-Childrens-association-kids-charity-walk.jpg");
 		program4.setName("Exploration");
-		program4.setDate(LocalDate.parse(("2023-09-21")));
+		program4.setDate(LocalDate.parse(("2023-09-23")));
 		program4.setDescription("Bring the children to various places of interests");
 		program4.setVolunteersRequired(15);
 		program4.setNoOfVolunteers(0);
@@ -324,7 +324,7 @@ public class Group1Application {
 		program5.setTimeOfProgram("Full day");
 		program5.setPhoto("https://media.timeout.com/images/105905438/750/562/image.jpg");
 		program5.setName("Donation events");
-		program5.setDate(LocalDate.parse(("2023-09-22")));
+		program5.setDate(LocalDate.parse(("2023-09-24")));
 		program5.setDescription("To source for donations at various locations");
 		program5.setVolunteersRequired(15);
 		program5.setNoOfVolunteers(0);
@@ -338,7 +338,7 @@ public class Group1Application {
 		program6.setTimeOfProgram("Full day");
 		program6.setPhoto("https://thesmartlocal.com/wp-content/uploads/2018/11/images_easyblog_articles_7240_b2ap3_large_charity-subscriptions-4.png");
 		program6.setName("Donation events");
-		program6.setDate(LocalDate.parse(("2023-09-23")));
+		program6.setDate(LocalDate.parse(("2023-09-25")));
 		program6.setDescription("To source for donations at various locations");
 		program6.setVolunteersRequired(15);
 		program6.setNoOfVolunteers(0);
